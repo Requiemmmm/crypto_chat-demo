@@ -1,8 +1,9 @@
-# 依赖
+# Dependencies
 node_modules/
 
-# 文档目录（不上传）
+# Documentation and Claude Code config (not uploaded)
 docs/
+.claude/
 
 # 日志
 *.log
