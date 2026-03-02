@@ -1,0 +1,21 @@
+﻿{
+  "name": "crypto-chat",
+  "version": "1.0.0",
+  "description": "End-to-end encrypted chat demo for cryptography course",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js"
+  },
+  "keywords": [
+    "e2ee",
+    "websocket",
+    "webcrypto",
+    "cryptography"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2",
+    "uuid": "^11.1.0",
+    "ws": "^8.18.0"
+  }
+}

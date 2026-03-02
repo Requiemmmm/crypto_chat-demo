@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E2EE Crypto Chat</title>
+    <style>
+      :root {
+        --bg: #f4f8fb;
+        --card: #ffffff;
+        --text: #10243e;
+        --line: #d3deeb;
+        --primary: #0b6dcf;
+        --self: #d8ecff;
+        --peer: #e8ffe2;
+        --sys: #fff4d8;
+      }
+      body {
+        margin: 0;
+        font-family: "Segoe UI", "PingFang SC", sans-serif;
+        background: radial-gradient(circle at top right, #e8f3ff, var(--bg));
+        color: var(--text);
+      }
+      .app {
+        max-width: 900px;
+        margin: 24px auto;
+        padding: 20px;
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 14px;
+      }
+      h1 {
+        margin-top: 0;
+      }
+      .status-row,
+      .join-row,
+      .send-row {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-bottom: 12px;
+      }
+      .status-row span {
+        background: #eef5fc;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 6px 10px;
+        font-size: 14px;
+      }
+      input {
+        flex: 1;
+        min-width: 220px;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        padding: 10px;
+      }
+      button {
+        border: 0;
+        border-radius: 10px;
+        padding: 10px 14px;
+        color: #fff;
+        background: var(--primary);
+        cursor: pointer;
+      }
+      button:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+      .fingerprint-box,
+      .debug-box {
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 12px;
+        margin-bottom: 12px;
+        background: #fbfdff;
+      }
+      .chat-box {
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        min-height: 280px;
+        max-height: 340px;
+        overflow: auto;
+        padding: 12px;
+        margin-bottom: 12px;
+        background: #fcfeff;
+      }
+      .msg {
+        margin-bottom: 10px;
+        padding: 8px 10px;
+        border-radius: 10px;
+        max-width: 80%;
+      }
+      .msg.self {
+        background: var(--self);
+        margin-left: auto;
+      }
+      .msg.peer {
+        background: var(--peer);
+      }
+      .msg.system {
+        background: var(--sys);
+        max-width: 100%;
+      }
+      @media (max-width: 640px) {
+        .app {
+          margin: 10px;
+          padding: 14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
